@@ -8,14 +8,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <nav className="bg-white text-black p-4 flex justify-between items-center">
       {/* Logo */}
       <div className="flex items-center gap-2">
          <Image
           src="/logo.png"
           alt="Spin Kenya Logo"
           width={60}
-          height={40}
+          height={60}
         />
         </div>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-blue-700 flex flex-col items-center gap-4 py-4 md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-4 py-4 md:hidden">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/tournaments">Tournaments</Link>
