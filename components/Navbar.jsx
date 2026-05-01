@@ -1,4 +1,5 @@
 "use client";
+import { useSession, signOut } from "next-auth/react";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -6,6 +7,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { data: session } = useSession();
 
   return (
     <nav className="bg-white text-black p-4 flex justify-between items-center">
@@ -25,7 +27,11 @@ export default function Navbar() {
         <Link href="/about">About</Link>
         <Link href="/tournaments">Tournaments</Link>
         <Link href="/merchandise">Merch</Link>
-        <Link href="/login">Login</Link>
+        {session ? (
+          <button onClick={() => signOut()}>Logout</button>
+        ) : (
+          <Link href="/login">Login</Link>
+        )}
       </div>
 
       {/* Mobile Menu Button */}
@@ -43,7 +49,11 @@ export default function Navbar() {
           <Link href="/about">About</Link>
           <Link href="/tournaments">Tournaments</Link>
           <Link href="/merchandise">Merch</Link>
-          <Link href="/login">Login</Link>
+          {session ? (
+            <button onClick={() => signOut()}>Logout</button>
+          ) : (
+            <Link href="/login">Login</Link>
+          )}
         </div>
       )}
     </nav>
