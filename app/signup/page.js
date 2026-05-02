@@ -4,22 +4,22 @@ import AuthHeader from "@/components/auth/AuthHeader";
 import GoogleButton from "@/components/auth/GoogleButton";
 import AuthFooter from "@/components/auth/AuthFooter";
 
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <AuthLayout>
       <AuthCard>
 
         <AuthHeader
-          title="Welcome Back"
-          subtitle="Sign in to continue your Spin Kenya journey"
+          title="Create Your Account"
+          subtitle="Join Spin Kenya and compete in tournaments"
         />
 
-        <GoogleButton />
+        <GoogleButton label="Sign up with Google" />
 
         <AuthFooter
-          text="Don’t have an account?"
-          linkText="Sign up"
-          linkHref="/signup"
+          text="Already have an account?"
+          linkText="Sign in"
+          linkHref="/login"
         />
 
       </AuthCard>
