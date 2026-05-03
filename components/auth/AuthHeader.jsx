@@ -11,6 +11,7 @@ export default function AuthHeader({ title, subtitle }) {
             alt="Spin Kenya"
             width={40}
             height={40}
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
       </div>
