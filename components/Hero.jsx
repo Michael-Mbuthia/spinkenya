@@ -38,11 +38,11 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <h1 className="text-4xl md:text-4xl font-bold mb-4">
           Spin Kenya
         </h1>
 
-        <p className="text-lg md:text-xl mb-6">
+        <p className="text-lg md:text-6xl mb-6">
           Stronger Playing in Numbers
         </p>
       </div>

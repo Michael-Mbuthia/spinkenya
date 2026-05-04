@@ -5,13 +5,12 @@ export default function AuthHeader({ title, subtitle }) {
     <div className="mb-6">
       {/* Logo */}
       <div className="flex justify-center mb-4">
-        <div className="w-16 h-16 rounded-full bg-blue-200 flex items-center justify-center">
+        <div className="relative w-16 h-16 rounded-full bg-blue-200 overflow-hidden">
           <Image
             src="/logo.png"
             alt="Spin Kenya"
-            width={40}
-            height={40}
-            style={{ width: "auto", height: "auto" }}
+            fill
+            className="object-contain"
           />
         </div>
       </div>
